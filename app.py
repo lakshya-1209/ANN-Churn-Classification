@@ -6,16 +6,16 @@ from sklearn.preprocessing import StandardScaler, LabelEncoder, OneHotEncoder
 import pickle
 
 # Load the trained model
-model = tf.keras.models.load_model('/content/drive/MyDrive/Udemy_GenAI_with_LangChain_HuggingFace/ANN_Classification_Project/model.h5')
+model = tf.keras.models.load_model('model.h5')
 
 # Load the encoder and scaler
-with open('/content/drive/MyDrive/Udemy_GenAI_with_LangChain_HuggingFace/ANN_Classification_Project/onehot_encoder_geo.pkl', 'rb') as file:
+with open('onehot_encoder_geo.pkl', 'rb') as file:
     onehot_encoder_geo = pickle.load(file)
 
-with open('/content/drive/MyDrive/Udemy_GenAI_with_LangChain_HuggingFace/ANN_Classification_Project/label_encoder_gender.pkl', 'rb') as file:
+with open('label_encoder_gender.pkl', 'rb') as file:
     label_encoder_gender = pickle.load(file)
 
-with open('/content/drive/MyDrive/Udemy_GenAI_with_LangChain_HuggingFace/ANN_Classification_Project/scaler.pkl', 'rb') as file:
+with open('scaler.pkl', 'rb') as file:
     scaler = pickle.load(file)
 
 ## Streamlit app
